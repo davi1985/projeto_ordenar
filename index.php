@@ -57,7 +57,5 @@ if (isset($_GET['ordem']) && !empty($_GET['ordem'])) {
  			<?php
 			endforeach;
 		}
-
-	 ?>
-	
+	 ?>	
 </table> 
