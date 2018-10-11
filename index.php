@@ -18,9 +18,7 @@ if (isset($_GET['ordem']) && !empty($_GET['ordem'])) {
 	$ordem = '';
 	$sql = "SELECT * FROM usuarios";
 }
-
  ?>
-
 
 <!-- Select HTML com as opções de ordenação -->
 <form method="GET">
@@ -33,7 +31,6 @@ if (isset($_GET['ordem']) && !empty($_GET['ordem'])) {
 	</select>
 </form>
 
-
 <!-- Tabela HTML com os dados do database -->
 <table border="1" width="400px">
 	<tr>
@@ -42,7 +39,7 @@ if (isset($_GET['ordem']) && !empty($_GET['ordem'])) {
 	</tr>
 
 	<?php
-
+		// Requisição ao database;
 		$sql = $pdo->query($sql);
 		//Verificando se encontrou resultados;			
 		if ($sql->rowCount() > 0) {	
