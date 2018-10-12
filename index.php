@@ -5,7 +5,7 @@ try {
 	$pdo = new PDO("mysql:dbname=projeto_ordenar;host=localhost","root","");
 	$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-	echo "ERRO AO CONECTA".$e->getMessage();
+	echo "ERRO AO CONECTAR".$e->getMessage();
 }
 
 // Verificando se houve opção selecionado no form acima
@@ -23,7 +23,7 @@ if (isset($_GET['ordem']) && !empty($_GET['ordem'])) {
 <!-- Select HTML com as opções de ordenação -->
 <form method="GET">
 	Ordenar resultados:
-	<!-- onchange="this.form.submit() - recarregando o form quando selecionada o option  -->
+	<!-- onchange="this.form.submit() - recarregando o form quando selecionado o option  -->
 	<select name="ordem" onchange="this.form.submit()">
 		<option></option>
 		<option value="nome" <?php echo ($ordem == "nome")?'selected="selected"':''; ?>>pelo nome</option>
